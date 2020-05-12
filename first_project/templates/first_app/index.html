@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static 'first_app/styles/styleOne.css' %}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container djtwo" align="center">
+      <h1>Hello</h1>
+      <h1>Access Records of The websites are given below</h1>
+      {% if acc_rec %}
+      <table>
+        <thead>
+          <th>Site</th>
+          <th>Date</th>
+        </thead>
+        {% for rec in acc_rec %}
+        <tr>
+          <td>{{ rec.name }}</td>
+          <td>{{ rec.date }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <h1>No access records present till now</h1>
+      {% endif %}
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" align="center">
+      <a href="{% url 'second' %}">To the second app</a>
+    </div>
+    <div class="container" align="center">
+      <a href="{% static 'first_app/image/savage_gandhi.jpg' %}"
+        ><img src="{% static 'first_app/image/savage_gandhi.jpg' %}"
+      /></a>
+    </div>
+  </body>
+</html>
