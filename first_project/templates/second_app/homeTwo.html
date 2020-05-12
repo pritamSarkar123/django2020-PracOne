@@ -1,6 +1,5 @@
 <html lang="en">
   <head>
-    {% load staticfiles %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,43 +8,23 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="{% static 'second_app/styles/styleOne.css' %}"
-    />
     <title>Document</title>
   </head>
   <body>
-    <!-- <div class="container">
-      <h1>Hello from second app</h1>
-      <h1>Uer name with email Id</h1>
-      {% if users %}
-      <ol>
-        {% for u in users %}
-        <li>User Info</li>
-        <ul>
-          <li>First Name :{{ u.first_name }}</li>
-          <li>Last Name : {{ u.last_name }}</li>
-          <li>Email : {{ u.email }}</li>
-        </ul>
-        {% endfor %}
-      </ol>
-      {% else %}
-      <h1>No user present</h1>
-      {% endif %}
-    </div> -->
     <div class="container">
       <div class="jumbotron">
-        {% if error %} {{ error }} {% endif %}
-        <h1>Please fillup the form</h1>
-        <form method="POST">
-          {% csrf_token %} {{ form.as_p }}
-          <input type="submit" class="btn btn-primary" value="Submit!" />
-        </form>
+        <h1>Welcome To Home</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          voluptates ab hic temporibus ex! Unde dignissimos, at velit ad qui
+          sequi quas nostrum repudiandae modi hic. Accusantium officiis
+          perspiciatis optio. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quia nostrum expedita veritatis esse, dolores porro reiciendis
+          quis, rerum, natus vitae maiores. Veniam quo sequi non inventore
+          aliquam mollitia, soluta temporibus.
+        </p>
       </div>
     </div>
-    <a href="{% url 'index' %}">to the first app</a>
-    <a href="{% url 'form_name' %}">Go to basic app</a>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

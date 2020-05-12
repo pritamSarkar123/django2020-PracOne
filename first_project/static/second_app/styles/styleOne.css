@@ -1,0 +1,14 @@
+h1 {
+  color: blue;
+}
+table,
+th,
+td {
+  border: 2px solid black;
+}
+img {
+  height: 400px;
+  width: 400px;
+  padding: 5px;
+  border: 2px solid black;
+}
