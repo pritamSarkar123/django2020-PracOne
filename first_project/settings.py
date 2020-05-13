@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'first_app.apps.FirstAppConfig',
     'second_app.apps.SecondAppConfig',
     'basicapp',
+    'baseAppOne',
+    'baseAppTwo',
 ]
 
 MIDDLEWARE = [

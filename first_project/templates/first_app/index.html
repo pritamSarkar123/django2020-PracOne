@@ -43,5 +43,11 @@
         ><img src="{% static 'first_app/image/savage_gandhi.jpg' %}"
       /></a>
     </div>
+    <a href="{% url 'baseAppOne:index' %}">
+      <h2>Go to basicAppOne index page</h2>
+    </a>
+    <a href="{% url 'baseAppTwo:index' %}"
+      ><h2>Go to basicAppTwo index page</h2></a
+    >
   </body>
 </html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html> {% extends 'baseAppTwo/base.html' %} {% block content %}
+<h1>Welcome to the index page of baseAppTwo</h1>
+<h2>{{ comment|title }}</h2>
+<h2>{{ value|add:"99" }}</h2>
+<h2>{{ name|cut:"a" }}</h2>
+<a href="{% url 'baseAppTwo:other' %}">
+  <h2>Go to other page of baseAppTwo</h2>
+</a>
+<a href="{% url 'baseAppTwo:relative' %}">
+  <h2>Go to relative page of baseAppTwo</h2>
+</a>
+<hr />
+<a href="{% url 'baseAppOne:index' %}"
+  ><h2>go to index page of baseAppOne</h2></a
+>
+{% endblock %}

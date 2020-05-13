@@ -1,0 +1,9 @@
+<!DOCTYPE html> {% extends 'baseAppOne/base.html' %} {% block content %}
+<h1>Welcome to the Relative page of baseAppOne</h1>
+<a href="{% url 'baseAppOne:index' %}">
+  <h2>go to the index page of baseAppTwo</h2>
+</a>
+<a href="{% url 'baseAppOne:other' %}">
+  <h2>go to the other page of baseAppOne</h2>
+</a>
+{% endblock %}
