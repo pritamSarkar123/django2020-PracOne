@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'basicapp',
     'baseAppOne',
     'baseAppTwo',
+    'basic_app',
 ]
 
 MIDDLEWARE = [
@@ -83,12 +84,19 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
+PASSWORD_HASHERS = []
+hashers = ['Argon2', 'BCryptSHA256', 'BCrypt', 'PBKDF2', 'PBKDF2SHA1']
+for hasher in hashers:
+    PASSWORD_HASHERS.append(
+        f'django.contrib.auth.hashers.{hasher}PasswordHasher')
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 9}
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -121,3 +129,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'first_project/static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
